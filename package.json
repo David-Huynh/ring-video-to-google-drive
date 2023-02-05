@@ -1,27 +1,22 @@
 {
-  "name": "ring-client-example",
-  "version": "1.0.0",
-  "description": "Example use of the `ring-client-api` npm package",
-  "main": "lib/index.js",
-  "scripts": {
-    "start": "npm run ts-example",
-    "auth": "ring-auth-cli",
-    "ts-example": "tsc && node lib/example.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dgreif/ring-client-example.git"
-  },
-  "bugs": {
-    "url": "https://github.com/dgreif/ring-client-example/issues"
-  },
-  "homepage": "https://github.com/dgreif/ring-client-example#readme",
-  "dependencies": {
-    "dotenv": "^16.0.3",
-    "ring-client-api": "^11.6.0"
-  },
-  "devDependencies": {
-    "@types/ws": "^8.5.3",
-    "typescript": "^4.9.3"
-  }
+    "name": "ring-client-to-google-drive",
+    "version": "1.0.0",
+    "description": "Connects ring notifications and saves recordings to google drive",
+    "main": "lib/index.js",
+    "scripts": {
+        "start": "npm run ts-ring-to-google",
+        "start-clean": "npm run build && npm run start",
+        "build": "tsc",
+        "auth": "ring-auth-cli",
+        "ts-ring-to-google": "node lib/ring-to-google.js"
+    },
+    "dependencies": {
+        "dotenv": "16.0.3",
+        "googleapis": "^110.0.0",
+        "rimraf": "^4.1.1",
+        "ring-client-api": "11.7.1"
+    },
+    "devDependencies": {
+        "typescript": "^4.9.4"
+    }
 }
