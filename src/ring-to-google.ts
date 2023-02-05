@@ -90,9 +90,6 @@ async function start() {
                     await sendVideoToDrive(fileName, env.FOLDER_ID!);
                 }
             });
-            const fileName = `${Date.now()}.mp4`;
-            await recordVideo(camera, fileName);
-            await sendVideoToDrive(fileName, env.FOLDER_ID!);
         }
         console.log("Listening for motion and doorbell presses on your cameras, records for 10 seconds when detected");
     }
